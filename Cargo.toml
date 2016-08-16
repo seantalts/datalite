@@ -1,5 +1,9 @@
 [package]
-
 name = "datalite"
 version = "0.0.1"
 authors = [ "Sean Talts <sean.talts@gmail.com" ]
+link = "serd"
+build = "build.rs"
+
+[dependencies]
+libc = "0.2"
