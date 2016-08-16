@@ -1,13 +1,19 @@
 extern crate libc;
 use libc::size_t;
+use std::ffi::CString;
+use std::os::raw::c_char;
 
+#[link(name = "serd-0", kind = "static")]
 extern {
-    fn serd_strlen(str: *const u8, n_bytes: size_t, flags: u32) -> size_t;
+    fn serd_strlen(str: *const c_char, n_bytes: &size_t, flags: *const u32) -> size_t;
 }
 
 fn main() {
     unsafe {
-        let sz = serd_strlen((&"hi").as_ptr(), 2, 0);
+        let s = CString::new("hello").unwrap();
+        let flags: u32 = 0;
+        let size: size_t = 5;
+        let sz = serd_strlen(s.as_ptr(), &size, &flags);
         println!("hi{}", sz);
     }
 }
