@@ -1,0 +1,9 @@
+[package]
+
+name = "rust-turtle"
+version = "0.0.1"
+authors = ["Simon Vetter <sive@web.de>"]
+keywords = ["turtle","n3","n-tiples"]
+
+[dev-dependencie]
+peg = "0.1.5"

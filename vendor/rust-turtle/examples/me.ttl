@@ -1,0 +1,14 @@
+@base <http://example.org/>.
+
+<#simon>
+    <#Wohnort> <#Laufach> .
+
+<#lukas>
+    <#Wohnort> <#Laufach>.
+
+<#Johannes>
+    <#Wohnort> <#Laufach>.
+
+<#Barbara>
+    <#Wohnort> <#Laufach>;
+    <#son> <#simon>, <#lukas>.
