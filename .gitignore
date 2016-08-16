@@ -8,3 +8,8 @@ libraries
 Cargo.lock
 
 *.swp
+*.o
+*.a
+*.dylib
+**/build/
+**/.lock*

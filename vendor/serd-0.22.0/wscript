@@ -136,6 +136,7 @@ def build(bld):
 
     # Static library
     if bld.env.BUILD_STATIC:
+        print "Static"
         bld(features        = 'c cstlib',
             export_includes = ['.'],
             source          = lib_source,
