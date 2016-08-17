@@ -3,7 +3,6 @@ use libc::size_t;
 use std::ffi::CString;
 use std::os::raw::c_char;
 
-#[link(name = "serd-0", kind = "static")]
 extern {
     fn serd_strlen(str: *const c_char, n_bytes: &size_t, flags: *const u32) -> size_t;
 }
